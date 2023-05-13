@@ -7,29 +7,29 @@
 <h2>Distancia</h2>
 
 <div class="container">
-    <div class="row div col-lg-6">
-        @using (Html.BeginForm("Distancia", "Distancia", FormMethod.Post))
-        {
-            <label>Pon los numeros para poder realizar la distancia entre 2 puntos:</label><br /><br />
+    <form action="/Distancia/Vista2">
+        <div class="row div col-lg-6">
+            @using (Html.BeginForm("DistanciaResultado", "Distancia", FormMethod.Post))
+            {
+                <label>Pon los numeros para poder realizar la distancia entre 2 puntos:</label><br /><br />
 
-            <label>X1:</label>
-            @Html.TextBoxFor(model => model.NumX1)
-            <br />
-            <label>Y1:</label>
-            @Html.TextBoxFor(model => model.NumY1)
-            <br /><br />
-            <label>X2:</label>
-            @Html.TextBoxFor(model => model.NumX2)
-            <br />
-            <label>Y2:</label>
-            @Html.TextBoxFor(model => model.NumY2)
-            <br /><br />
+                <label>X1:</label>
+                @Html.TextBoxFor(model => model.NumX1)
+                <br />
+                <label>Y1:</label>
+                @Html.TextBoxFor(model => model.NumY1)
+                <br /><br />
+                <label>X2:</label>
+                @Html.TextBoxFor(model => model.NumX2)
+                <br />
+                <label>Y2:</label>
+                @Html.TextBoxFor(model => model.NumY2)
+                <br /><br />
+                <input type="submit" value="Calcular" class="btn btn-danger" />
 
-            <input type="submit" name="cal" value="calcular" />
 
-        }
-    </div>
-    <div class="row div col-lg-6">
-        <h1>El resultado es: @Html.DisplayFor(model => model.Res)</h1>
-    </div>
+            }
+        </div>
+    </form>
+    
 </div>

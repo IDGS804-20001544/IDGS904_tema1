@@ -1,8 +1,4 @@
 ﻿using IDGS904_tema1.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace IDGS904_tema1.Controllers
@@ -12,17 +8,31 @@ namespace IDGS904_tema1.Controllers
         // GET: Distancia
         public ActionResult Index()
         {
-
             return View();
         }
 
-        public ActionResult Distancia(Distancia Dis)
+        
+        public ActionResult Distancia()
         {
-           
+            return View();
+            }
+        public RedirectToRouteResult Vista2(Distancia Dis)
+        {
             Dis.Res = Dis.DistanciaCal();
-            
-            return View(Dis);
+            TempData["Res"] = Dis.Res;
 
+            return RedirectToAction("DistanciaResultado");
+        }
+        public ActionResult DistanciaResultado()
+        {
+            string Res = "";
+            if (TempData.ContainsKey("Res"))
+            {
+                Res = TempData["Res"].ToString();
+            }
+            ViewBag.Res = Res;
+
+            return View();
         }
     }
 }

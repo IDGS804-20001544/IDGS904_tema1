@@ -7,15 +7,21 @@ namespace IDGS904_tema1.Models
 {
     public class Distancia
     {
-        public int NumX1 { get; set; }
-        public int NumY1 { get; set; }
-        public int NumX2 { get; set; }
-        public int NumY2 { get; set; }
+        public double NumX1 { get; set; }
+        public double NumY1 { get; set; }
+        public double NumX2 { get; set; }
+        public double NumY2 { get; set; }
         public double Res { get; set; }
 
         public double DistanciaCal()
         {
-            return Math.Sqrt(Math.Pow(NumX2 - NumX1, 2) +(Math.Pow (NumY2-NumY1,2)));
+            double X1 = NumX1;
+            double Y1 = NumY1;
+            double X2 = NumX2;
+            double Y2 = NumY2;
+
+            double Resultado= Math.Sqrt(Math.Pow(NumX2 - NumX1, 2) + Math.Pow(NumY2 - NumY1, 2));
+            return Resultado;
         }
 
 
