@@ -122,11 +122,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DistanciaController.cs" />
     <Compile Include="Controllers\EscuelaController.cs" />
+    <Compile Include="Controllers\GradosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NuevoController.cs" />
+    <Compile Include="Controllers\TienditaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Alumnos.cs" />
+    <Compile Include="Models\Grados.cs" />
     <Compile Include="Models\Distancia.cs" />
     <Compile Include="Models\Productos.cs" />
     <Compile Include="Models\OperasBas.cs" />
@@ -196,6 +200,14 @@
     <Content Include="Views\Distancia\Distancia.cshtml" />
     <Content Include="Views\Distancia\DistanciaResultado.cshtml" />
     <Content Include="Views\Distancia\Vista2.cshtml" />
+    <Content Include="Views\Tiendita\Index.cshtml" />
+    <Content Include="Views\Tiendita\DisplayTemplates\Boolean.cshtml" />
+    <Content Include="Views\Tiendita\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Tiendita\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Tiendita\Registrar.cshtml" />
+    <Content Include="Views\Grados\Grados.cshtml" />
+    <Content Include="Views\Grados\Resultado.cshtml" />
+    <Content Include="Views\Grados\Op.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -15,8 +15,6 @@ namespace IDGS904_tema1.Models
 
         public double DistanciaCal()
         {
-         
-
             double Resultado= Math.Sqrt(Math.Pow(NumX2 - NumX1, 2) + Math.Pow(NumY2 - NumY1, 2));
             return Resultado;
         }

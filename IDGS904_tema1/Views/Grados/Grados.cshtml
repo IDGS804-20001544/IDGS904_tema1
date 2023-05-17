@@ -1,0 +1,97 @@
+﻿@model IDGS904_tema1.Models.Grados
+
+@{
+    ViewBag.Title = "Grados";
+}
+
+
+<style>
+    .custom-radio {
+        display: inline-block;
+        position: relative;
+        padding-left: 25px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+        .custom-radio input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .custom-radio .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #eee;
+            border-radius: 50%;
+        }
+
+        .custom-radio input:checked + .checkmark {
+            background-color: #2196F3;
+        }
+
+        .custom-radio .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .custom-radio input:checked + .checkmark:after {
+            display: block;
+        }
+
+        .custom-radio .checkmark:after {
+            top: 6px;
+            left: 6px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+</style>
+
+<h2>Conversión</h2>
+@using (Html.BeginForm("Op", "Grados", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(model => Model.Grado, htmlAttributes:
+            new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Grado, new
+           {
+               htmlAtributes =
+            new { @class = "form-control" }
+           })
+            </div>
+        </div>
+    </div><br />
+
+
+    <div class="form-group">
+        <label class="custom-radio">
+            @Html.RadioButtonFor(model => model.Oper, "1")
+            <span class="checkmark"></span>
+            Convertir a Celsius
+        </label>
+        <br />
+        <label class="custom-radio">
+            @Html.RadioButtonFor(model => model.Oper, "2")
+            <span class="checkmark"></span>
+            Convertir a Fahrenheit
+        </label>
+    </div>
+
+
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" name="name" value="Calcular" class="btn btn-danger" />
+        </div>
+    </div>
+
+}

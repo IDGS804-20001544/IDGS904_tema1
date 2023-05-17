@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Resultado";
+}
+<style>
+    .red {
+        color: red;
+    }
+</style>
+<h2>Resultados</h2>
+
+<h1 class="red">Resultado de la conversión: @ViewBag.Resultado</h1><br />
+
+@using (Html.BeginForm("Grados", "Grados", FormMethod.Get))
+{
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Regresar" class="btn btn-danger" />
+        </div>
+    </div>
+}
