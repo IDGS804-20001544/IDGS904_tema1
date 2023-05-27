@@ -1,0 +1,13 @@
+ 
+rojo red
+azul blue
+perro dog
+verde green
+amarillo yellow
+ 
+ 
+ 
+ 
+ 
+ 
+ 
